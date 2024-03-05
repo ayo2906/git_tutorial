@@ -25,6 +25,64 @@ user_entry.grid(row= 1 , column= 1)
 pass_entry = tkinter.Entry(main_window, font=("calibri", 14))
 pass_entry.grid(row= 2 , column= 1)
 
+class PersonalFinanceTracker:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Personal Finance Tracker")
+        self.username = self.prompt_user_name()
+        self.account_balance = 0.00
+        self.transactions = []
+
+        # Main window setup
+        self.setup_main_window()
+
+    def prompt_user_name(self):
+        # This method will prompt for the user's name. Implement as needed.
+        return "User"
+
+    def setup_main_window(self):
+        # Display a personalized greeting
+        greeting_label = tkinter.Label(self.root, text=f"Welcome, {self.username}!")
+        greeting_label.pack()
+
+        # Display the current account balance
+        balance_label = tkinter.Label(self.root, text=f"Current Balance: ${self.account_balance:,.2f}")
+        balance_label.pack()
+
+        # Placeholder for last transaction summary
+        self.last_transaction_label = tkinter.Label(self.root, text="Last Transaction: None")
+        self.last_transaction_label.pack()
+
+        # Add transaction management buttons
+        add_transaction_button = tkinter.Button(self.root, text="Add Transaction", command=self.add_transaction)
+        add_transaction_button.pack()
+
+        summary_button = tkinter.Button(self.root, text="Summary", command=self.show_summary)
+        summary_button.pack()
+
+        delete_transaction_button = tkinter.Button(self.root, text="Delete Transaction", command=self.delete_transaction)
+        delete_transaction_button.pack()
+
+        
+    def add_transaction(self):
+        # Placeholder for add transaction functionality
+        pass
+
+    def show_summary(self):
+        # Placeholder for showing transaction summary
+        pass
+
+    def delete_transaction(self):
+        # Placeholder for delete transaction functionality
+        pass
+
+# Main application execution
+if __name__ == "__main__":
+    root = tkinter.Tk()
+    app = PersonalFinanceTracker(root)
+    root.mainloop()
+
+
 def check_pass():
     if (user_entry.get() == "Ayo112") & (pass_entry.get() == "123456"):
         print("log in successful")
