@@ -28,6 +28,7 @@ pass_entry.grid(row= 2 , column= 1)
 def check_pass():
     if (user_entry.get() == "Ayo112") & (pass_entry.get() == "123456"):
         print("log in successful")
+        main_window()
     else:
         print("Invalid username or password")
     
