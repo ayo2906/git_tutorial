@@ -92,7 +92,7 @@ def check_pass():
     
 
 
-submit_btn = tkinter.Button(main_window, text="Submit", font=("calibri", 14))
+submit_btn = tkinter.Button(main_window, text="Submit", font=("calibri", 14) , command=check_pass)
 submit_btn.grid(row= 3, column= 0)
 
 
