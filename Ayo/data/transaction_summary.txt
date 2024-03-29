@@ -1,0 +1,2 @@
+ID: 1, Type: Expense, Category: Food, Amount: 100.0, Date: 2010-10-1, Payee: 20000
+ID: 2, Type: Income, Category: Salary, Amount: 100.0, Date: 2010-10-9, Payee: 0

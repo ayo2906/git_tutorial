@@ -1,6 +1,5 @@
 import tkinter
 import random
-from tkinter import ttk
 
 balance = 0
 #transaction = []
@@ -70,9 +69,6 @@ def submit_trans(type_entry, amount_entry, category_entry):
     transaction.append({"ID": str(trans_ID), "type": trans_type,
                         "category": trans_category, "amount": float(trans_amount), "data": trans_date})
     
-def on_combobox_select(event):
-    selected_value = combobox.get()
-
 
 def add_trans():
 
@@ -82,15 +78,8 @@ def add_trans():
     type_label = tkinter.Label(temp_window, text="Type", font=('calibri',14))
     type_label.grid(row=0, column=0)
 
-    type_entry = ['Salary', 'Pension', 'Interest', 'Others']
-
-    combobox = ttk.Combobox(root, values=type_entry)
-    combobox.pack(pady=5)
-
-    combobox.current(0)
-
-    #type_entry = tkinter.Entry(temp_window)
-    #type_entry.grid(row=0, column=1)
+    type_entry = tkinter.Entry(temp_window)
+    type_entry.grid(row=0, column=1)
 
     amount_label = tkinter.Label(temp_window, text="Amount", font=('calibri',14))
     amount_label.grid(row=1, column=0)
